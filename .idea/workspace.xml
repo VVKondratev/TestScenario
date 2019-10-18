@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28ffa1c0-4063-48e1-8c01-5234a55b8b7a" name="Default Changelist" comment="" />
+    <list default="true" id="28ffa1c0-4063-48e1-8c01-5234a55b8b7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/ElementAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/WebPageInteraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/vvk/web/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/Main.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="355" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -15,6 +28,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -22,11 +38,17 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1SKkQghy8VPwCkQ7VWVQQpkbA8O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -40,6 +62,68 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.vvk.web.Main" />
+      <module name="TestScenario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vvk.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test-Scenario-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/Test-Scenario-1.0-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestScenario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vvk.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vvk.web" />
+      <option name="MAIN_CLASS_NAME" value="ru.vvk.web.MainTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.openWebPage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestScenario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.vvk.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.vvk.web" />
+      <option name="MAIN_CLASS_NAME" value="ru.vvk.web.MainTest" />
+      <option name="METHOD_NAME" value="openWebPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.Test-Scenario-1.0-SNAPSHOT.jar" />
+        <item itemvalue="TestNG.MainTest" />
+        <item itemvalue="TestNG.MainTest.openWebPage" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -52,5 +136,26 @@
       <updated>1571319659341</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1571333233590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.vvk.web.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TestScenario$MainTest_testOne.ic" NAME="MainTest.testOne Coverage Results" MODIFIED="1571329403831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.vvk.web.*</FILTER>
+    </SUITE>
   </component>
 </project>
