@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28ffa1c0-4063-48e1-8c01-5234a55b8b7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/ElementAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/WebPageInteraction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/vvk/web/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/ElementAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/ElementAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/WebPageInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/WebPageInteraction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +131,14 @@
       <option name="presentableId" value="Default" />
       <updated>1571319659341</updated>
     </task>
+    <task id="LOCAL-00001" summary="Second commit. Points one and two are ready.">
+      <created>1571412164343</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571412164344</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +153,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Second commit. Points one and two are ready." />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit. Points one and two are ready." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1571333233590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

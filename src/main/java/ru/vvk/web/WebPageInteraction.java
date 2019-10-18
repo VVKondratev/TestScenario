@@ -1,26 +1,28 @@
 package ru.vvk.web;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathFactory;
+import java.util.Random;
 
 public class WebPageInteraction {
-    final int OPEN_CATEGORY = 3;
-    WebDriver driver;
+    final int ACTION_CHAIN = 5;
+    private WebDriver driver;
 
     public WebPageInteraction() {
         driver = new FirefoxDriver();
         // tries to open chercher.tech page
         this.open("https://www.ozon.ru/");
-        if (this.isLoad()) {
-            ElementAccess element = new ElementAccess();
-            closePopUpWindow(element);
-            openAllCategories(element);
-            getMusicCategory(element);
+        ElementAccess element = new ElementAccess();
+        String[] path = initActionChain();
+        for (int i = 0; i < ACTION_CHAIN; i++) {
+            burnThisChain(element, path[i]);
+        }
+        if (isGoodsListLoaded(element)) {
+            Long numberOfElements = goodsNumber(element);
+            chooseProductByNumber(Utils.randomize(numberOfElements));
+        } else {
+            System.out.println("Goods list wasn't load");
         }
     }
 
@@ -28,35 +30,41 @@ public class WebPageInteraction {
         driver.get(webpage);
     }
 
-    private boolean isLoad() {
-        Thread onload = new Thread(() -> {
-            String pageLoadStatus = null;
-            JavascriptExecutor js;
-            do {
-                js = (JavascriptExecutor) driver;
-                pageLoadStatus = (String) js.executeScript("return document.readyState");
-                try {
-                    Thread.currentThread().sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } while (!pageLoadStatus.equals("complete"));
-        });
-        onload.start();
-        return true;
+    private void burnThisChain(ElementAccess element, String path) {
+        element.getAccessAndClick(path, driver);
     }
 
-    private void closePopUpWindow(ElementAccess element){
-        element.getAccess("//button[@class='close']", driver);
-        element.click();
+    //Fourth item
+    private boolean isGoodsListLoaded(ElementAccess element) {
+        //Check if table is open tile m-default m-border
+        String path = "//div[@class='tiles']";
+        return element.isLoaded(path, driver);
     }
 
-    private void openAllCategories(ElementAccess element){
-        element.getAccess("//*[@class='context-chip m-all-contexts']", driver);
-        element.click();
+    //Fifth item
+    private Long goodsNumber(ElementAccess element) {
+        //Check number of goods in the table
+        String path = "//div[@class='tile m-default m-border']";
+
+        return new Long(element.getElementsNumber(path, driver));
     }
-    private void getMusicCategory(ElementAccess element){
-        element.getAccess("//div[contains(text(),'Музыка')]", driver);
-        element.click();
+
+    private void chooseProductByNumber(Long id){
+
+    }
+
+    private String[] initActionChain() {
+        String[] path = new String[ACTION_CHAIN];
+        //Close popup window
+        path[0] = "//button[@class='close']";
+        //Open all category
+        path[1] = "//*[@class='context-chip m-all-contexts']";
+        //Set to music category
+        path[2] = "//div[contains(text(),'Музыка')]";
+        //Search
+        path[3] = "//button[@class='m-search button default flat-button']";
+        //Choose vynile
+        path[4] = "//a[@class='_7eb738']";
+        return path;
     }
 }
