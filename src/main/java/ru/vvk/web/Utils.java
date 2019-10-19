@@ -1,12 +1,14 @@
 package ru.vvk.web;
 
-import java.util.Random;
-
 public class Utils {
-
+    /** Поле, сохраняющее предидущее полученное значение */
     static int prev = -1;
 
-    //Sixth item
+    /**
+     * Пункт 6. Генерируется случайное число в диапазоне от 1 до num.
+     * @param num Количество товаров, полученное в пункте 5.
+     * @return Возвращает случайное число.
+     */
     public static Long randomize(Long num) {
         long leftLimit = 1L;
         long rightLimit = num;
@@ -18,6 +20,10 @@ public class Utils {
         return generatedLong;
     }
 
+    /**
+     * Вспомогательный метод, приостанавливающий работу программы.
+     * @param timeOut Время в миллисекундах.
+     */
     public static void wait(int timeOut) {
         try {
             Thread.sleep(1000);
