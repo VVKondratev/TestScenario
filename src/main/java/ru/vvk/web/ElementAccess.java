@@ -19,7 +19,6 @@ public class ElementAccess {
     public boolean getAccessAndClick(String path) {
         WebDriverWait wait = new WebDriverWait(driver, 30, 1000);
         element = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(path))));
-        // element = wait.until(drv -> driver.findElement(By.xpath(path)));
         if (element != null) {
             if (element.isDisplayed()) {
                 element.click();
@@ -35,7 +34,7 @@ public class ElementAccess {
 
     public boolean isLoaded(String path) {
         Long timeOut = new Long(20);
-        WebDriverWait wait = new WebDriverWait(driver, timeOut,1000);
+        WebDriverWait wait = new WebDriverWait(driver, timeOut, 1000);
         WebElement element = wait.until(drv -> driver.findElement(By.xpath(path)));
         if (element != null) {
             return true;
@@ -46,14 +45,14 @@ public class ElementAccess {
 
     public Long getElementsNumber(String path) {
         Long timeOut = new Long(20);
-        WebDriverWait wait = new WebDriverWait(driver, timeOut,1000);
+        WebDriverWait wait = new WebDriverWait(driver, timeOut, 1000);
         List<WebElement> element = wait.until(drv -> driver.findElements(By.xpath(path)));
         return new Long(element.size());
     }
 
     public String getElementsText(String path) {
         Long timeOut = new Long(20);
-        WebDriverWait wait = new WebDriverWait(driver, timeOut,1000);
+        WebDriverWait wait = new WebDriverWait(driver, timeOut, 1000);
         WebElement element = wait.until(drv -> driver.findElement(By.xpath(path)));
         if (element != null) {
             return element.getText();
@@ -67,7 +66,7 @@ public class ElementAccess {
         driver.get(webpage);
     }
 
-    public void close(){
+    public void close() {
         driver.quit();
     }
 
