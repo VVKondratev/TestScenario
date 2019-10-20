@@ -1,26 +1,26 @@
 package ru.vvk.web;
 
-import lombok.Data;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-@Data
 public class WebPage {
+    private static final String FIREFOX_DRIVER = "./lib/geckodriver.exe";
+    private static final long TIME_OUT = 30L;
+    private static final long SLEEP_INTERVAL = 1000L;
+
     /**
      * Поле драйвера
      */
     private WebDriver driver;
-    /**
-     * Поле элемента
-     */
-    private WebElement element;
+
+    public WebPage() {
+        System.setProperty("webdriver.gecko.driver", FIREFOX_DRIVER);
+        driver = new FirefoxDriver();
+    }
 
     /**
      * С помощью xpath-запроса получается элемент. Для этого элемента вызывается метод click().
@@ -28,10 +28,21 @@ public class WebPage {
      * @param path - xpath запрос. Передается в переменой типа String.
      */
     public void waitAndClick(String path) {
-        WebDriverWait wait = new WebDriverWait(driver, 30, 1000);
+        WebDriverWait wait = new WebDriverWait(driver, TIME_OUT, SLEEP_INTERVAL);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(path))));
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(path)));
-        driver.findElement(By.xpath(path)).click();
+        do {
+            try {
+                driver.findElement(By.xpath(path)).click();
+                break;
+            } catch (Throwable e) {
+                try {
+                    Thread.sleep(SLEEP_INTERVAL);
+                } catch (InterruptedException ex) {
+                    continue;
+                }
+            }
+        } while (true);
     }
 
     /**
@@ -40,15 +51,14 @@ public class WebPage {
      * @param path - xpath запрос. Передается в переменой типа String.
      * @return - Возвращается true, если элемент был загруженн. Возвращается false, если элемент загружен не был.
      */
-    public boolean isLoaded(String path) {
-        Long timeOut = new Long(20);
+    public boolean isExists(String path) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, timeOut, 1000);
-            WebElement element = wait.until(drv -> driver.findElement(By.xpath(path)));
-        } catch (NoSuchElementException e) {
+            WebDriverWait wait = new WebDriverWait(driver, TIME_OUT, SLEEP_INTERVAL);
+            wait.until(drv -> driver.findElement(By.xpath(path)));
+            return true;
+        } catch (NoSuchElementException | TimeoutException e) {
             return false;
         }
-        return true;
     }
 
     /**
@@ -57,11 +67,10 @@ public class WebPage {
      * @param path - xpath запрос. Передается в переменой типа String.
      * @return - Возвращается количество найденных элементов.
      */
-    public Long getElementsCount(String path) {
-        Long timeOut = new Long(20);
-        WebDriverWait wait = new WebDriverWait(driver, timeOut, 1000);
+    public int getElementsCount(String path) {
+        WebDriverWait wait = new WebDriverWait(driver, TIME_OUT, SLEEP_INTERVAL);
         List<WebElement> element = wait.until(drv -> driver.findElements(By.xpath(path)));
-        return new Long(element.size());
+        return element.size();
     }
 
     /**
@@ -70,15 +79,10 @@ public class WebPage {
      * @param path - xpath запрос. Передается в переменой типа String.
      * @return - Возвращается текст элемента.
      */
-    public String getElementsText(String path) {
-        Long timeOut = new Long(20);
-        WebDriverWait wait = new WebDriverWait(driver, timeOut, 1000);
+    public String getElementText(String path) {
+        WebDriverWait wait = new WebDriverWait(driver, TIME_OUT, SLEEP_INTERVAL);
         WebElement element = wait.until(drv -> driver.findElement(By.xpath(path)));
-        if (element != null) {
-            return element.getText();
-        } else {
-            return "";
-        }
+        return element.getText();
     }
 
     /**
@@ -95,12 +99,5 @@ public class WebPage {
      */
     public void close() {
         driver.quit();
-    }
-
-    /**
-     * Конструктор - инициализируется объект driver
-     */
-    public WebPage() {
-        driver = new FirefoxDriver();
     }
 }
