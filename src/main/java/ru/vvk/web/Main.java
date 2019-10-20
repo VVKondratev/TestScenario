@@ -15,6 +15,7 @@ public class Main {
      */
     public static void main(String[] args) {
         WebConfig.configure();
+
         WebPageInteraction wpi = new WebPageInteraction();
     }
 }

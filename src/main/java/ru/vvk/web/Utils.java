@@ -16,7 +16,6 @@ public class Utils {
         do {
             generatedLong = leftLimit + (long) (Math.random() * (rightLimit - leftLimit));
         } while (generatedLong == prev);
-
         return generatedLong;
     }
 
