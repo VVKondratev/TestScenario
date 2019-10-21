@@ -104,7 +104,7 @@ public class OzonTest {
 
     @AfterTest
     public void teardown() {
-        // page.close();
+        page.close();
     }
 
     @Test(description = "1. Открыть в браузере сайт https://www.ozon.ru/. Если откроется всплывающее окно – закрыть его.", timeOut = TIME_OUT)
