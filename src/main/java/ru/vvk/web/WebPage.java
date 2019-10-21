@@ -8,8 +8,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class WebPage {
+    /**
+     * Путь к драйверу firefox
+     */
     private static final String FIREFOX_DRIVER = "./lib/geckodriver.exe";
+    /**
+     * Время ожидания
+     */
     private static final long TIME_OUT = 30L;
+    /**
+     * Время между попытками доступа
+     */
     private static final long SLEEP_INTERVAL = 1000L;
 
     /**

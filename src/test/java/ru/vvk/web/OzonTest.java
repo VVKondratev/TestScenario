@@ -8,13 +8,27 @@ import org.testng.annotations.Test;
 import static java.lang.String.format;
 
 public class OzonTest {
-
+    /**
+     * Класс продукции.
+     */
     private class ProductInfo {
+        /**
+         * Индекс товара в списке
+         */
         int index;
+        /**
+         * Название товара
+         */
         String title;
+        /**
+         * Цена товара
+         */
         int price;
     }
 
+    /**
+     * Объект, работающий со страницей
+     */
     WebPage page;
 
     private int goodsCount = 0;
@@ -97,12 +111,12 @@ public class OzonTest {
      */
     private static final String IS_CARD_EMPTY = "//h1[contains(text(),'Корзина пуста')]";
 
-    @BeforeTest
+    @BeforeTest(description = "Инициализация объекта, работющего со страницей")
     public void setup() {
         page = new WebPage();
     }
 
-    @AfterTest
+    @AfterTest(description = "Закрытие браузера")
     public void teardown() {
         page.close();
     }
@@ -139,7 +153,9 @@ public class OzonTest {
 
     @Test(description = "6. Сгенерировать случайное число в диапазоне от 1 до количества товаров, полученного в п.5.", dependsOnMethods = "goodsCount", timeOut = TIME_OUT)
     public void generateRandomNumber() {
-        product1.index = (int) (Math.random() * goodsCount);
+        do {
+            product1.index = (int) (Math.random() * goodsCount);
+        } while (!page.isExists(format("//div[@data-index='%s']//button[@type='button']", product1.index)));
         Assert.assertTrue(product1.index < goodsCount);
     }
 
@@ -180,7 +196,7 @@ public class OzonTest {
     public void generateSecondRandomNumber() {
         do {
             product2.index = (int) (Math.random() * goodsCount);
-        } while (product1.index == product2.index);
+        } while ((product1.index == product2.index) & !(!page.isExists(format("//div[@data-index='%s']//button[@type='button']", product1.index))));
 
         Assert.assertTrue(product2.index < goodsCount);
     }

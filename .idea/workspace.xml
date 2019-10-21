@@ -193,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571648578710</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Release.">
+      <created>1571654462442</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571654462442</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -227,10 +234,11 @@
     <MESSAGE value="JavaDoc commit. Points one to twenty one are ready. Without tests." />
     <MESSAGE value="Beta. Points one to twenty one are ready. Tests are ready." />
     <MESSAGE value="Beta 2.0. Points one to twenty one are ready. Tests are ready." />
-    <option name="LAST_COMMIT_MESSAGE" value="Beta 2.0. Points one to twenty one are ready. Tests are ready." />
+    <MESSAGE value="Release." />
+    <option name="LAST_COMMIT_MESSAGE" value="Release." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="OzonTest Coverage Results" MODIFIED="1571589583456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="OzonTest Coverage Results" MODIFIED="1571662438082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.vvk.web.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TestScenario$MainTest_testOne.ic" NAME="MainTest.testOne Coverage Results" MODIFIED="1571329403831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
