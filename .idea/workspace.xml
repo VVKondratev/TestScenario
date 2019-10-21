@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="28ffa1c0-4063-48e1-8c01-5234a55b8b7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/Utils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vvk/web/WebPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/WebPageInteraction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vvk/web/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lib/geckodriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lib/geckodriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/vvk/web/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/vvk/web/OzonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/vvk/web/OzonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/vvk/web/OzonTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571573983490</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Beta 2.0. Points one to twenty one are ready. Tests are ready.">
+      <created>1571587981768</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571587981768</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -219,10 +220,11 @@
     <MESSAGE value="Fifth commit. Points one to twenty one are ready. Without tests." />
     <MESSAGE value="JavaDoc commit. Points one to twenty one are ready. Without tests." />
     <MESSAGE value="Beta. Points one to twenty one are ready. Tests are ready." />
-    <option name="LAST_COMMIT_MESSAGE" value="Beta. Points one to twenty one are ready. Tests are ready." />
+    <MESSAGE value="Beta 2.0. Points one to twenty one are ready. Tests are ready." />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta 2.0. Points one to twenty one are ready. Tests are ready." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1571511822419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="OzonTest Coverage Results" MODIFIED="1571589583456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.vvk.web.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TestScenario$MainTest_testOne.ic" NAME="MainTest.testOne Coverage Results" MODIFIED="1571329403831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
