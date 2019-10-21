@@ -196,7 +196,7 @@ public class OzonTest {
     public void generateSecondRandomNumber() {
         do {
             product2.index = (int) (Math.random() * goodsCount);
-        } while ((product1.index == product2.index) & !(!page.isExists(format("//div[@data-index='%s']//button[@type='button']", product1.index))));
+        } while ((product1.index == product2.index) & !(page.isExists(format("//div[@data-index='%s']//button[@type='button']", product1.index))));
 
         Assert.assertTrue(product2.index < goodsCount);
     }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28ffa1c0-4063-48e1-8c01-5234a55b8b7a" name="Default Changelist" comment="" />
+    <list default="true" id="28ffa1c0-4063-48e1-8c01-5234a55b8b7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/vvk/web/OzonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/vvk/web/OzonTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +206,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571662609141</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Release.">
+      <created>1571669928687</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571669928687</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Release.">
+      <created>1571670118635</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571670118635</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -242,7 +258,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Release." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="OzonTest Coverage Results" MODIFIED="1571662438082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/TestScenario$MainTest.ic" NAME="OzonTest Coverage Results" MODIFIED="1571670198263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ru.vvk.web.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TestScenario$MainTest_testOne.ic" NAME="MainTest.testOne Coverage Results" MODIFIED="1571329403831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
