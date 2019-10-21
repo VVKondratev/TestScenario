@@ -40,7 +40,7 @@ public class OzonTest {
     /**
      * Максимальное время выполнения.
      */
-    private static final long TIME_OUT = 20000;
+    private static final long TIME_OUT = 40000;
 
     /**
      * Кнопка закрытия всплывающего окна.
